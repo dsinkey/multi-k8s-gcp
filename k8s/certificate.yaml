@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certficate
+metadata:
+  name: kubernetes-cloud-testing-com-tls
+spec:
+  secretName: kubernetes-cloud-testing-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: kubernetescloudtesting.com
+  dnsNames:
+    - kubernetescloudtesting.com
+    - www.kubernetescloudtesting.com
