@@ -10,6 +10,6 @@ docker push dsinkey9/multi-server:$SHA
 docker push dsinkey9/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployments server=dsinkey9/multi-server:$SHA
-kubectl set image deployments/client-deployments server=dsinkey9/multi-client:$SHA
-kubectl set image deployments/worker-deployments server=dsinkey9/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=dsinkey9/multi-server:$SHA
+kubectl set image deployments/client-deployment server=dsinkey9/multi-client:$SHA
+kubectl set image deployments/worker-deployment server=dsinkey9/multi-worker:$SHA
